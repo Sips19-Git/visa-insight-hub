@@ -7,9 +7,6 @@ import {
   Home,
   Heart,
   FileCheck,
-  ShieldCheck,
-  Users,
-  Clock,
   ArrowRight,
   Check,
   Mail,
@@ -25,7 +22,7 @@ import img1 from "@/assets/image.png.asset.json";
 import img2 from "@/assets/image-2.png.asset.json";
 import img4 from "@/assets/image-4.png.asset.json";
 import img5 from "@/assets/image-5.png.asset.json";
-import img6 from "@/assets/image-6.png.asset.json";
+
 import img7 from "@/assets/image-7.png.asset.json";
 import img8 from "@/assets/image-8.png.asset.json";
 import img9 from "@/assets/image-9.png.asset.json";
@@ -40,7 +37,8 @@ const svcResidency = img7.url;
 const svcFamily = img2.url;
 const svcCitizenship = img4.url;
 const svcBusiness = img8.url;
-const processBg = img6.url;
+import processBgAsset from "@/assets/process-bg.jpg.asset.json";
+const processBg = processBgAsset.url;
 import {
   Reveal,
   RevealGroup,
@@ -100,12 +98,8 @@ const steps = [
   { n: "04", title: "Approval & Arrival", desc: "Interview coaching, biometrics support and a relocation briefing for a smooth landing." },
 ];
 
-const stats = [
-  { k: "12k+", v: "Visas approved" },
-  { k: "98%", v: "Approval rate" },
-  { k: "90+", v: "Destinations" },
-  { k: "15", v: "Years in practice" },
-];
+
+
 
 const testimonials = [
   { name: "Aarav S.", role: "Skilled Worker, Germany", quote: "They turned a 9-month nightmare into a 6-week approval. Every email got answered the same day." },
@@ -130,7 +124,8 @@ function TypewriterHeadline() {
   return (
     <h1
       aria-label={text}
-      className="font-display text-white text-6xl md:text-8xl font-semibold tracking-tight drop-shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
+      style={{ fontFamily: 'Italiana, "Cormorant Garamond", Georgia, serif' }}
+      className="text-white text-6xl md:text-8xl font-semibold tracking-tight drop-shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
     >
       {findPart}
       <span className="italic">{passportPart}</span>
@@ -277,18 +272,7 @@ function Index() {
       </RevealGroup>
 
 
-      {/* STATS — continuous marquee */}
-      <section className="border-y border-border bg-card overflow-hidden py-5">
-        <div className="marquee-track flex w-max gap-16 whitespace-nowrap">
-          {[...stats, ...stats, ...stats, ...stats].map((s, i) => (
-            <div key={i} className="flex items-baseline gap-3 px-6">
-              <span className="font-display text-3xl md:text-4xl font-semibold text-gold tracking-tight">{s.k}</span>
-              <span className="text-sm uppercase tracking-[0.2em] text-muted-foreground">{s.v}</span>
-              <span className="text-gold/40 ml-10">✦</span>
-            </div>
-          ))}
-        </div>
-      </section>
+
 
       {/* SERVICES — large image cards */}
       <RevealGroup id="services" className="mx-auto max-w-7xl px-6 py-24">
@@ -344,8 +328,8 @@ function Index() {
       {/* PROCESS */}
       <section id="process" className="relative bg-primary text-primary-foreground py-36 overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <img src={processBg} alt="" className="w-full h-full object-cover opacity-40" loading="lazy" />
-          <div className="absolute inset-0 bg-primary/80" />
+          <img src={processBg} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          <div className="absolute inset-0 bg-primary/60" />
         </div>
         <div className="mx-auto max-w-7xl px-6">
           <div className="max-w-2xl">
@@ -376,37 +360,6 @@ function Index() {
       </section>
 
 
-
-      {/* WHY */}
-      <RevealGroup className="bg-secondary py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <RevealItem className="max-w-2xl">
-            <span className="text-xs uppercase tracking-[0.2em] text-gold-foreground/70">Why HB</span>
-            <h2 className="mt-3 font-display text-4xl md:text-5xl font-semibold tracking-tight">
-              Built for outcomes you can plan around.
-            </h2>
-          </RevealItem>
-          <div className="mt-14 grid md:grid-cols-3 gap-6">
-            {[
-              { icon: ShieldCheck, t: "Regulated practice", d: "ICCRC and OISC affiliated consultants accountable to professional bodies." },
-              { icon: Clock, t: "Speed without shortcuts", d: "Average preparation time of 14 days — half the industry standard." },
-              { icon: Users, t: "Real human support", d: "WhatsApp, email, calls. Your case manager is one message away." },
-            ].map((b) => (
-              <RevealItem key={b.t}>
-                <motion.div
-                  whileHover={{ y: -6 }}
-                  transition={{ type: "spring", stiffness: 220, damping: 20 }}
-                  className="rounded-2xl bg-card border border-border p-8 h-full hover:shadow-[var(--shadow-elegant)] hover:border-gold/40 transition-all"
-                >
-                  <b.icon className="h-7 w-7 text-gold-foreground" />
-                  <h3 className="mt-5 font-display text-xl font-semibold">{b.t}</h3>
-                  <p className="mt-2 text-base text-muted-foreground leading-relaxed">{b.d}</p>
-                </motion.div>
-              </RevealItem>
-            ))}
-          </div>
-        </div>
-      </RevealGroup>
 
       {/* TESTIMONIALS */}
       <RevealGroup id="stories" className="mx-auto max-w-7xl px-6 py-24">
