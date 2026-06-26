@@ -328,8 +328,8 @@ function Index() {
       {/* PROCESS */}
       <section id="process" className="relative bg-primary text-primary-foreground py-36 overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <img src={processBg} alt="" className="w-full h-full object-cover opacity-40" loading="lazy" />
-          <div className="absolute inset-0 bg-primary/80" />
+          <img src={processBg} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          <div className="absolute inset-0 bg-primary/60" />
         </div>
         <div className="mx-auto max-w-7xl px-6">
           <div className="max-w-2xl">
