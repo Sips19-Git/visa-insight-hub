@@ -347,7 +347,7 @@ function Index() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.05 }}
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.08 }}
-                whileHover={{ y: -6 }}
+                whileHover={{ y: -6, boxShadow: "0 0 24px 4px color-mix(in oklab, var(--color-primary-foreground) 45%, transparent)" }}
                 className="rounded-2xl border border-primary-foreground/10 p-6 h-full bg-primary-foreground/[0.02] hover:bg-primary-foreground/[0.05] transition-colors"
               >
                 <div className="font-display text-3xl text-gold">{step.n}</div>
@@ -371,11 +371,11 @@ function Index() {
         </RevealItem>
         <div className="mt-14 grid md:grid-cols-3 gap-6">
           {testimonials.map((t) => (
-            <RevealItem key={t.name}>
+          <RevealItem key={t.name}>
               <motion.div
-                whileHover={{ y: -6 }}
+                whileHover={{ y: -6, boxShadow: "0 0 24px 4px color-mix(in oklab, var(--color-primary) 50%, transparent)" }}
                 transition={{ type: "spring", stiffness: 220, damping: 20 }}
-                className="rounded-2xl border border-border bg-card p-8 h-full flex flex-col hover:shadow-[var(--shadow-elegant)] hover:border-gold/40 transition-all"
+                className="rounded-2xl border-2 border-primary bg-card p-8 h-full flex flex-col hover:border-primary transition-all"
               >
                 <p className="font-display text-lg leading-snug flex-1">"{t.quote}"</p>
                 <div className="mt-6 pt-6 border-t border-border">
@@ -411,26 +411,30 @@ function Index() {
             </p>
           </RevealItem>
           <RevealItem>
-            <form className="mt-10 max-w-xl mx-auto grid sm:grid-cols-2 gap-3 text-left">
-              <input className="rounded-lg border border-border bg-card px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="Full name" />
-              <input className="rounded-lg border border-border bg-card px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="Email address" type="email" />
-              <input className="sm:col-span-2 rounded-lg border border-border bg-card px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="Destination country" />
-              <textarea rows={3} className="sm:col-span-2 rounded-lg border border-border bg-card px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="Tell us briefly about your goal" />
+            <motion.form
+              whileHover={{ y: -4, boxShadow: "0 25px 60px -12px color-mix(in oklab, var(--color-primary) 35%, transparent)" }}
+              transition={{ type: "spring", stiffness: 260, damping: 20 }}
+              className="mt-10 max-w-xl mx-auto grid sm:grid-cols-2 gap-3 text-left rounded-3xl border border-border bg-card p-8 shadow-[0_10px_40px_-15px_rgba(20,20,40,0.2)]"
+            >
+              <input className="rounded-xl border border-border bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="Full name" />
+              <input className="rounded-xl border border-border bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="Email address" type="email" />
+              <input className="sm:col-span-2 rounded-xl border border-border bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="Destination country" />
+              <textarea rows={3} className="sm:col-span-2 rounded-xl border border-border bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="Tell us briefly about your goal" />
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="button"
-                className="sm:col-span-2 inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+                className="sm:col-span-2 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
               >
                 Request my free consultation <ArrowRight className="h-4 w-4" />
               </motion.button>
-            </form>
+            </motion.form>
           </RevealItem>
         </div>
       </RevealGroup>
 
       {/* LARGE FOOTER */}
-      <footer className="bg-primary text-primary-foreground pt-24 pb-10">
+      <footer className="bg-primary text-primary-foreground pt-40 pb-16">
         <div className="mx-auto max-w-7xl px-6">
           <RevealGroup className="grid lg:grid-cols-12 gap-12 pb-16 border-b border-primary-foreground/15">
             <RevealItem className="lg:col-span-5">
