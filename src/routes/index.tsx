@@ -40,7 +40,9 @@ const svcResidency = img7.url;
 const svcFamily = img2.url;
 const svcCitizenship = img4.url;
 const svcBusiness = img8.url;
-const processBg = img6.url;
+import processBgAsset from "@/assets/process-bg.jpg.asset.json";
+const processBg = processBgAsset.url;
+const _unused6 = img6;
 import {
   Reveal,
   RevealGroup,
