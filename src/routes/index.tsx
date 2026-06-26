@@ -279,18 +279,7 @@ function Index() {
       </RevealGroup>
 
 
-      {/* STATS — continuous marquee */}
-      <section className="border-y border-border bg-card overflow-hidden py-5">
-        <div className="marquee-track flex w-max gap-16 whitespace-nowrap">
-          {[...stats, ...stats, ...stats, ...stats].map((s, i) => (
-            <div key={i} className="flex items-baseline gap-3 px-6">
-              <span className="font-display text-3xl md:text-4xl font-semibold text-gold tracking-tight">{s.k}</span>
-              <span className="text-sm uppercase tracking-[0.2em] text-muted-foreground">{s.v}</span>
-              <span className="text-gold/40 ml-10">✦</span>
-            </div>
-          ))}
-        </div>
-      </section>
+
 
       {/* SERVICES — large image cards */}
       <RevealGroup id="services" className="mx-auto max-w-7xl px-6 py-24">
