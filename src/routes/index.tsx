@@ -347,8 +347,7 @@ function Index() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.05 }}
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.08 }}
-                whileHover={{ y: -6 }}
-                whileHover={{ boxShadow: "0 0 24px 4px color-mix(in oklab, var(--color-primary-foreground) 45%, transparent)" }}
+                whileHover={{ y: -6, boxShadow: "0 0 24px 4px color-mix(in oklab, var(--color-primary-foreground) 45%, transparent)" }}
                 className="rounded-2xl border border-primary-foreground/10 p-6 h-full bg-primary-foreground/[0.02] hover:bg-primary-foreground/[0.05] transition-colors"
               >
                 <div className="font-display text-3xl text-gold">{step.n}</div>
