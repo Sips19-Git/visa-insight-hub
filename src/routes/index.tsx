@@ -131,7 +131,8 @@ function TypewriterHeadline() {
   return (
     <h1
       aria-label={text}
-      className="font-display text-white text-6xl md:text-8xl font-semibold tracking-tight drop-shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
+      style={{ fontFamily: 'Italiana, "Cormorant Garamond", Georgia, serif' }}
+      className="text-white text-6xl md:text-8xl font-semibold tracking-tight drop-shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
     >
       {findPart}
       <span className="italic">{passportPart}</span>
