@@ -368,37 +368,6 @@ function Index() {
 
 
 
-      {/* WHY */}
-      <RevealGroup className="bg-secondary py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <RevealItem className="max-w-2xl">
-            <span className="text-xs uppercase tracking-[0.2em] text-gold-foreground/70">Why HB</span>
-            <h2 className="mt-3 font-display text-4xl md:text-5xl font-semibold tracking-tight">
-              Built for outcomes you can plan around.
-            </h2>
-          </RevealItem>
-          <div className="mt-14 grid md:grid-cols-3 gap-6">
-            {[
-              { icon: ShieldCheck, t: "Regulated practice", d: "ICCRC and OISC affiliated consultants accountable to professional bodies." },
-              { icon: Clock, t: "Speed without shortcuts", d: "Average preparation time of 14 days — half the industry standard." },
-              { icon: Users, t: "Real human support", d: "WhatsApp, email, calls. Your case manager is one message away." },
-            ].map((b) => (
-              <RevealItem key={b.t}>
-                <motion.div
-                  whileHover={{ y: -6 }}
-                  transition={{ type: "spring", stiffness: 220, damping: 20 }}
-                  className="rounded-2xl bg-card border border-border p-8 h-full hover:shadow-[var(--shadow-elegant)] hover:border-gold/40 transition-all"
-                >
-                  <b.icon className="h-7 w-7 text-gold-foreground" />
-                  <h3 className="mt-5 font-display text-xl font-semibold">{b.t}</h3>
-                  <p className="mt-2 text-base text-muted-foreground leading-relaxed">{b.d}</p>
-                </motion.div>
-              </RevealItem>
-            ))}
-          </div>
-        </div>
-      </RevealGroup>
-
       {/* TESTIMONIALS */}
       <RevealGroup id="stories" className="mx-auto max-w-7xl px-6 py-24">
         <RevealItem className="max-w-2xl">
