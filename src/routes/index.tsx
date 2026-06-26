@@ -98,12 +98,8 @@ const steps = [
   { n: "04", title: "Approval & Arrival", desc: "Interview coaching, biometrics support and a relocation briefing for a smooth landing." },
 ];
 
-const stats = [
-  { k: "12k+", v: "Visas approved" },
-  { k: "98%", v: "Approval rate" },
-  { k: "90+", v: "Destinations" },
-  { k: "15", v: "Years in practice" },
-];
+
+
 
 const testimonials = [
   { name: "Aarav S.", role: "Skilled Worker, Germany", quote: "They turned a 9-month nightmare into a 6-week approval. Every email got answered the same day." },
