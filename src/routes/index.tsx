@@ -348,6 +348,7 @@ function Index() {
                 viewport={{ once: true, amount: 0.05 }}
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.08 }}
                 whileHover={{ y: -6 }}
+                whileHover={{ boxShadow: "0 0 24px 4px color-mix(in oklab, var(--color-primary-foreground) 45%, transparent)" }}
                 className="rounded-2xl border border-primary-foreground/10 p-6 h-full bg-primary-foreground/[0.02] hover:bg-primary-foreground/[0.05] transition-colors"
               >
                 <div className="font-display text-3xl text-gold">{step.n}</div>
@@ -371,11 +372,11 @@ function Index() {
         </RevealItem>
         <div className="mt-14 grid md:grid-cols-3 gap-6">
           {testimonials.map((t) => (
-            <RevealItem key={t.name}>
+          <RevealItem key={t.name}>
               <motion.div
-                whileHover={{ y: -6 }}
+                whileHover={{ y: -6, boxShadow: "0 0 24px 4px color-mix(in oklab, var(--color-primary) 50%, transparent)" }}
                 transition={{ type: "spring", stiffness: 220, damping: 20 }}
-                className="rounded-2xl border border-border bg-card p-8 h-full flex flex-col hover:shadow-[var(--shadow-elegant)] hover:border-gold/40 transition-all"
+                className="rounded-2xl border-2 border-primary bg-card p-8 h-full flex flex-col hover:border-primary transition-all"
               >
                 <p className="font-display text-lg leading-snug flex-1">"{t.quote}"</p>
                 <div className="mt-6 pt-6 border-t border-border">
@@ -434,7 +435,7 @@ function Index() {
       </RevealGroup>
 
       {/* LARGE FOOTER */}
-      <footer className="bg-primary text-primary-foreground pt-24 pb-10">
+      <footer className="bg-primary text-primary-foreground pt-40 pb-16">
         <div className="mx-auto max-w-7xl px-6">
           <RevealGroup className="grid lg:grid-cols-12 gap-12 pb-16 border-b border-primary-foreground/15">
             <RevealItem className="lg:col-span-5">
