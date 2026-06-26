@@ -25,7 +25,7 @@ import img1 from "@/assets/image.png.asset.json";
 import img2 from "@/assets/image-2.png.asset.json";
 import img4 from "@/assets/image-4.png.asset.json";
 import img5 from "@/assets/image-5.png.asset.json";
-import img6 from "@/assets/image-6.png.asset.json";
+
 import img7 from "@/assets/image-7.png.asset.json";
 import img8 from "@/assets/image-8.png.asset.json";
 import img9 from "@/assets/image-9.png.asset.json";
