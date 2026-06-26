@@ -30,8 +30,9 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --font-display: "Italiana", "Cormorant Garamond", Georgia, serif;
-  --font-sans: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Times New Roman", Times, serif;
+  --font-sans: "Times New Roman", Times, serif;
+  --font-hero: "Italiana", "Cormorant Garamond", Georgia, serif;
 }
 
 :root {
