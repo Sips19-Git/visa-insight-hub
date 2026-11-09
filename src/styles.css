@@ -30,8 +30,8 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --font-display: "Times New Roman", Times, serif;
-  --font-sans: "Times New Roman", Times, serif;
+  --font-display: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --font-sans: Arial, "Helvetica Neue", Helvetica, sans-serif;
   --font-hero: "Italiana", "Cormorant Garamond", Georgia, serif;
 }
 
